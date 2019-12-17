@@ -18,6 +18,7 @@ KALORIE_BROKUL      = 33.7
 KALORIE_KALAFIOR    = 24.0
 KALORIE_SELER       = 14.0
 KALORIE_BURAK       = 43
+KALORIE_CEBULA      = 40
 
 #Gramatura słoika
 GRAMATURA_SLOIKA = 170 #gramatura sloika w gramach
@@ -33,9 +34,11 @@ dodajBrokul     = float(input("Podaj ile użyto brokuła: "))
 dodajKalafior   = float(input("Podaj ile użyto kalafiora: "))
 dodajSeler      = float(input("Podaj ile użyto selera: "))
 dodajBurak      = float(input("Podaj ile użyto buraka: "))
+dodajCebule     = float(input("Podaj ile użyto cebuli: "))
+
 
 sumaGramaturyProduktow = float(dodajBrokul + dodajBurak + dodajCukinnia + dodajDynia + dodajIndyk + dodajKalafior\
-+ dodajMarchewke + dodajPietruszka + dodajSeler + dodajZiemniak
++ dodajMarchewke + dodajPietruszka + dodajSeler + dodajZiemniak + dodajCebule
 )
 
 
@@ -43,7 +46,7 @@ sumaGramaturyProduktow = float(dodajBrokul + dodajBurak + dodajCukinnia + dodajD
 #Całościowa kaloryczność zupy
 caloscowaKalorycznoscZupy = float((dodajMarchewke * KALORIE_MARCHEWKA + dodajZiemniak * KALORIE_ZIEMNIAK + dodajDynia * KALORIE_DYNIA\
 + dodajIndyk * KALORIE_INDYK + dodajPietruszka * KALORIE_PIETRUSZKA + dodajCukinnia * KALORIE_CUKINNIA + dodajBrokul * KALORIE_BROKUL\
-+ dodajKalafior * KALORIE_KALAFIOR + dodajSeler * KALORIE_SELER + dodajBurak * KALORIE_BURAK)/100
++ dodajKalafior * KALORIE_KALAFIOR + dodajSeler * KALORIE_SELER + dodajBurak * KALORIE_BURAK + dodajCebule * KALORIE_CEBULA)/100
 )
 
 lista = [["Brokul", dodajBrokul, dodajBrokul*KALORIE_BROKUL/100],
@@ -56,6 +59,7 @@ lista = [["Brokul", dodajBrokul, dodajBrokul*KALORIE_BROKUL/100],
          ["Pietruszka", dodajPietruszka, dodajPietruszka*KALORIE_PIETRUSZKA/100],
          ["Seler", dodajSeler, dodajSeler*KALORIE_SELER/100],
          ["Ziemniak", dodajZiemniak, dodajZiemniak*KALORIE_ZIEMNIAK/100]
+         ["Cebula", dodajCebule, dodajCebule*KALORIE_CEBULA/100]
         ]  
 print("\n\n")
 print("----------------------------------------------------------------")
