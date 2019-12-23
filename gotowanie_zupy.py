@@ -66,16 +66,12 @@ for item in lista:
               item[2]," "*(21-len(str(item[2]))),"|" )
 print("----------------------------------------------------------------")
 print("\n")
-print("Kaloryczność zupy wynosi",format(caloscowaKalorycznoscZupy,".2f") + "kcal")
-if sumaGramaturyProduktow > 0:
-    print("W sloiku",GRAMATURA_SLOIKA,"g znajduje się",format(caloscowaKalorycznoscZupy * GRAMATURA_SLOIKA / sumaGramaturyProduktow,".2f"),"kcal")
+print("Ze "+ str(format(sumaGramaturyProduktow,".2f")) + "g produktów uzyskano " + str(format(caloscowaKalorycznoscZupy,".2f")) + " kcal")
+if sumaGramaturyProduktow > GRAMATURA_SLOIKA:
+    print("W sloiku " + str(format(GRAMATURA_SLOIKA,".2f")) + "g znajduje się " + \
+          str(format(caloscowaKalorycznoscZupy * GRAMATURA_SLOIKA / sumaGramaturyProduktow,".2f")) + " kcal"
+         )
 else:
-    print("Gramatura jest równa",sumaGramaturyProduktow + "g")
+    print("Użyto zbyt mało produktów dla " + str(format(GRAMATURA_SLOIKA,".2f")) + " g słolika.")
 
-
-wylaczenieProgramu = str(input("\nCzy chcesz wyłączyć program T/N ?"))
-
-if wylaczenieProgramu == "T" or wylaczenieProgramu == "t":
-    exit("KONIEC")
-else:
-    input("To nie kończę")
+input("Naciśnij dowolny przycisk aby zakończyc.")
