@@ -1,13 +1,9 @@
 #Program do wyliczenia kaloryczności zupy v0.2 
 
-
-
-##########################################################
-#v0.1 - napisano funkcjonalność programu
-#v0.2 - dodano funkcję warunkową if do gramatury produktów
-#       dodano cebulę            
-##########################################################
-
+#############################################################
+#v0.1 - napisano funkcjonalność programu                    #
+#v0.2 - dodano funkcję warunkową if do gramatury produktów  #     
+#############################################################
 
 #Kaloryczność produktów w 100g
 KALORIE_MARCHEWKA   = 41.3
@@ -38,12 +34,9 @@ dodajSeler      = float(input("Podaj ile użyto selera: "))
 dodajBurak      = float(input("Podaj ile użyto buraka: "))
 dodajCebule     = float(input("Podaj ile użyto cebuli: "))
 
-
 sumaGramaturyProduktow = float(dodajBrokul + dodajBurak + dodajCukinnia + dodajDynia + dodajIndyk + dodajKalafior\
 + dodajMarchewke + dodajPietruszka + dodajSeler + dodajZiemniak + dodajCebule
 )
-
-
 
 #Całościowa kaloryczność zupy
 caloscowaKalorycznoscZupy = float((dodajMarchewke * KALORIE_MARCHEWKA + dodajZiemniak * KALORIE_ZIEMNIAK + dodajDynia * KALORIE_DYNIA\
