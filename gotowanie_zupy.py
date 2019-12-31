@@ -44,17 +44,17 @@ caloscowaKalorycznoscZupy = float((dodajMarchewke * KALORIE_MARCHEWKA + dodajZie
 + dodajKalafior * KALORIE_KALAFIOR + dodajSeler * KALORIE_SELER + dodajBurak * KALORIE_BURAK + dodajCebule * KALORIE_CEBULA)/100
 )
 
-lista = [["Brokul", dodajBrokul, dodajBrokul*KALORIE_BROKUL/100],
-         ["Burak", dodajBurak, dodajBurak*KALORIE_BURAK/100],
-         ["Cukinnia", dodajCukinnia, dodajCukinnia*KALORIE_CUKINNIA/100],
-         ["Dynia", dodajDynia, dodajDynia*KALORIE_DYNIA/100],
-         ["Indyk", dodajIndyk, dodajIndyk*KALORIE_INDYK/100],
-         ["Kalafior", dodajKalafior, dodajKalafior*KALORIE_KALAFIOR/100],
-         ["Marchewka", dodajMarchewke, dodajMarchewke*KALORIE_MARCHEWKA/100],
-         ["Pietruszka", dodajPietruszka, dodajPietruszka*KALORIE_PIETRUSZKA/100],
-         ["Seler", dodajSeler, dodajSeler*KALORIE_SELER/100],
-         ["Ziemniak", dodajZiemniak, dodajZiemniak*KALORIE_ZIEMNIAK/100],
-         ["Cebula", dodajCebule, dodajCebule*KALORIE_CEBULA/100]
+lista = [["Brokul", dodajBrokul, format(dodajBrokul*KALORIE_BROKUL/100,".2f")],
+         ["Burak", dodajBurak, format(dodajBurak*KALORIE_BURAK/100,".2f")],
+         ["Cukinnia", dodajCukinnia, format(dodajCukinnia*KALORIE_CUKINNIA/100,".2f")],
+         ["Dynia", dodajDynia, format(dodajDynia*KALORIE_DYNIA/100,".2f")],
+         ["Indyk", dodajIndyk, format(dodajIndyk*KALORIE_INDYK/100,".2f")],
+         ["Kalafior", dodajKalafior, format(dodajKalafior*KALORIE_KALAFIOR/100,".2f")],
+         ["Marchewka", dodajMarchewke, format(dodajMarchewke*KALORIE_MARCHEWKA/100,".2f")],
+         ["Pietruszka", dodajPietruszka, format(dodajPietruszka*KALORIE_PIETRUSZKA/100,".2f")],
+         ["Seler", dodajSeler, format(dodajSeler*KALORIE_SELER/100,".2f")],
+         ["Ziemniak", dodajZiemniak, format(dodajZiemniak*KALORIE_ZIEMNIAK/100,".2f")],
+         ["Cebula", dodajCebule, format(dodajCebule*KALORIE_CEBULA/100,".2f")]
         ]  
 print("\n\n")
 print("----------------------------------------------------------------")
@@ -73,5 +73,6 @@ if sumaGramaturyProduktow > GRAMATURA_SLOIKA:
          )
 else:
     print("Użyto zbyt mało produktów dla " + str(format(GRAMATURA_SLOIKA,".2f")) + " g słolika.")
+print("\nW 100g zupy znajduje się " + str(format(caloscowaKalorycznoscZupy * 100 / sumaGramaturyProduktow,".2f")) + " kcal")
 
-input("Naciśnij dowolny przycisk aby zakończyc.")
+input("\nNaciśnij dowolny przycisk aby zakończyc.")
